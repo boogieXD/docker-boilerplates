@@ -1,0 +1,1 @@
+Don't forget to update `mktxp/mktxp.conf` with correct username/password and set router IP

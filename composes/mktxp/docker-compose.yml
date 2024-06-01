@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  mktxp:
+    container_name: mktxp
+    image: ghcr.io/akpw/mktxp:gha-8797619120
+    user: root
+    volumes:
+      - './mktxp/:/root/mktxp/'
+
+    restart: always

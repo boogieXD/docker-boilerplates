@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  loki:
+    command: -config.file=/etc/loki/loki-config.yml
+    container_name: loki
+    image: grafana/loki:2.9.0
+    networks:
+      - local
+    ports:
+      - 3100:3100
+
+    restart: always
+    volumes:
+    - ./loki-config.yml:/etc/loki/loki-config.yml
+
+networks:
+  local:
+    external: true
